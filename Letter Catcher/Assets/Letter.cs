@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerController : MonoBehaviour
+public class Letter : MonoBehaviour
 {
+    [SerializeField] string whichLetter;
     // Start is called before the first frame update
     void Start()
     {

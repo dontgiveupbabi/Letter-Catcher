@@ -111,9 +111,10 @@ GameObject:
   - component: {fileID: 2236369904487744392}
   - component: {fileID: 2236369904487744395}
   - component: {fileID: 2236369904487744394}
+  - component: {fileID: -1735246458749073903}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: P
+  m_TagString: Letter
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -193,6 +194,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-1735246458749073903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2236369904487744397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1915e3b843fba434b925b23c5c0eb933, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  whichLetter: P
 --- !u!1 &3800982795026160310
 GameObject:
   m_ObjectHideFlags: 0
