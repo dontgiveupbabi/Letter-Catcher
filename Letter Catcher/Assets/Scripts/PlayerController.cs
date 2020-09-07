@@ -9,6 +9,10 @@ public class PlayerController : MonoBehaviour
     private bool isGrounded;
     private Animator animator;
 
+    public bool inInnerCircle;
+    public bool inOutercircle;
+    public bool isOutOfCircle = true;
+
     [SerializeField] private float jumpFactor;
     // Start is called before the first frame update
     void Start()
@@ -26,12 +30,22 @@ public class PlayerController : MonoBehaviour
 
     private void JumpHandler()
     {
-        if (Input.GetMouseButtonDown(0)&& isGrounded )
+        if (Input.GetMouseButtonDown(0)&& isGrounded && inOutercircle)
         {
             myRigidbody.AddForce(Vector3.up*jumpFactor,ForceMode.Impulse);
+                isGrounded = !isGrounded;
+                animator.SetTrigger("Jumping");
+        }
+        
+        if (Input.GetMouseButtonDown(0)&& isGrounded && inInnerCircle)
+        {
+            myRigidbody.AddForce(Vector3.up*jumpFactor*1.5f,ForceMode.Impulse);
             isGrounded = !isGrounded;
             animator.SetTrigger("Jumping");
         }
+        
+        
+        
     }
 
     private void OnCollisionEnter(Collision other)
@@ -42,4 +56,29 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("Running");
         }
     }
+    
+    private void OnTriggerEnter(Collider other)
+    {
+       
+        if (other.transform.gameObject.CompareTag("OuterCircle"))
+        {
+            inOutercircle = true;
+            inInnerCircle = false;
+            isOutOfCircle = false;
+        }
+        else if (other.transform.gameObject.CompareTag("InnerCircle"))
+        {
+            inOutercircle = false;
+            inInnerCircle = true;
+            isOutOfCircle = false;
+        }
+        else if (other.transform.gameObject.CompareTag("OutOfCircle"))
+        {
+            inOutercircle = false;
+            inInnerCircle = false;
+            isOutOfCircle = true;
+        }        
+        
+    }
+
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Letter : MonoBehaviour
 {
-    [SerializeField] string whichLetter;
+    [SerializeField] public string whichLetter;
     // Start is called before the first frame update
     void Start()
     {

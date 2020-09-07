@@ -63,6 +63,7 @@
           <e p="FollowPlayer.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
         </e>
+        <e p="TextPrinter.cs" t="Include" />
       </e>
       <e p="Letter Catcher.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />

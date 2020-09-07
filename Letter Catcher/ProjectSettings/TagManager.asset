@@ -6,6 +6,12 @@ TagManager:
   tags:
   - Platform
   - Letter
+  - FirstCircle
+  - SecondCircle
+  - ThirdCircle
+  - OutOfCircle
+  - OuterCircle
+  - InnerCircle
   layers:
   - Default
   - TransparentFX
