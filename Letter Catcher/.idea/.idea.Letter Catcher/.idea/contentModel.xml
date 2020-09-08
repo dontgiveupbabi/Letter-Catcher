@@ -58,12 +58,16 @@
             </e>
           </e>
         </e>
-        <e p="Letter.cs" t="Include" />
+        <e p="LetterSpawner.cs" t="Include" />
+        <e p="LevelManager.cs" t="Include" />
         <e p="Scripts" t="Include">
           <e p="FollowPlayer.cs" t="Include" />
+          <e p="Letter.cs" t="Include" />
+          <e p="MathParabola.cs" t="Include" />
+          <e p="ParabolaController.cs" t="Include" />
           <e p="PlayerController.cs" t="Include" />
+          <e p="TextPrinter.cs" t="Include" />
         </e>
-        <e p="TextPrinter.cs" t="Include" />
       </e>
       <e p="Letter Catcher.sln" t="IncludeFlat" />
       <e p="obj" t="ExcludeRecursive" />
